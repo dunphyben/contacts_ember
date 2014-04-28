@@ -1,8 +1,14 @@
-<h1>{{name}}</h1>
+<div class="col-md-8">
+  <h1>{{name}}</h1>
 
-<p>Email: {{email}}</p>
-<p>Phone: {{phone}}</p>
+  <p>Email: {{email}}</p>
+  <p>Phone: {{phone}}</p>
 
-<p>{{#link-to 'edit_contact' this}}Edit{{/link-to}}</p>
+  <p>{{#link-to 'edit_contact' this}}Edit{{/link-to}}</p>
 
-<p>{{#link-to 'contacts'}}Return to homepage{{/link-to}}</p>
+  <p>{{#link-to 'contacts'}}Return to homepage{{/link-to}}</p>
+</div>
+
+<div class="col-md-4">
+  {{outlet}}
+</div>
