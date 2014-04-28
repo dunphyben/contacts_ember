@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
     if @contact.save
       render :json => @contact, :status => 201
     else
-      render :json => @contact.errors, :status => 422
+      render :json => {:errors => @contact.errors}, :status => 422
     end
   end
 
@@ -23,7 +23,7 @@ class ContactsController < ApplicationController
     if @contact.update(params[:contact])
       head :no_content
     else
-      render :json => @contact.errors, :status => 422
+      render :json => {:errors => @contact.errors}, :status => 422
     end
   end
 
